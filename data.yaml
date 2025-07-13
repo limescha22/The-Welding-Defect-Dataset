@@ -1,0 +1,7 @@
+train: /Users/emilschallwig/Documents/AI applications/Manufacturing/archive/The Welding Defect Dataset/The Welding Defect Dataset/train/images
+val: /Users/emilschallwig/Documents/AI applications/Manufacturing/archive/The Welding Defect Dataset/The Welding Defect Dataset/valid/images
+test: /Users/emilschallwig/Documents/AI applications/Manufacturing/archive/The Welding Defect Dataset/The Welding Defect Dataset/test/images
+
+nc: 3
+names: ['Bad Weld', 'Good Weld', 'Defect']
+
