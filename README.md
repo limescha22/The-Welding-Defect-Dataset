@@ -178,6 +178,6 @@ If I continued the project, I would focus on:
 - adding experiment tracking with configuration files,
 - converting the notebook workflow into a more reproducible training pipeline.
 
-## What This Project Demonstrates
+## Lessons Learned
 
-This project demonstrates my ability to approach a messy real-world computer vision dataset, investigate data quality before modeling, build multiple baselines, compare modeling tradeoffs, and critically evaluate whether a machine learning solution is appropriate for the problem.
+The main lesson from this project was that model performance depends heavily on dataset quality and evaluation design. Before investing in larger architectures, it is important to inspect the data, understand label consistency, check for near-duplicates, and define metrics that match the actual task. In this case, the limitations of the dataset were as important as the model results.
