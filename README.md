@@ -10,9 +10,12 @@ The key lesson I took from this project is that computer vision work needs caref
 
 The two examples below give a quick impression of the data: some images are relatively clear, while others are already transformed, augmented, or visually messy, which made the modeling task more difficult.
 
-![Example weld image with text overlay](train/images/carbon-steel-good-welds_14_jpeg_jpg.rf.49688b4d08c60bf6a65cc6f03e7d25ff.jpg)
-
-![Example preprocessed weld image](train/images/0e538f39-1d30436c-c23_jpg.rf.9af91763a613bf193d03c39400da2ec6.jpg)
+<table>
+  <tr>
+    <td><img src="train/images/carbon-steel-good-welds_14_jpeg_jpg.rf.49688b4d08c60bf6a65cc6f03e7d25ff.jpg" alt="Example weld image with text overlay" width="320"></td>
+    <td><img src="train/images/0e538f39-1d30436c-c23_jpg.rf.9af91763a613bf193d03c39400da2ec6.jpg" alt="Example preprocessed weld image" width="320"></td>
+  </tr>
+</table>
 
 This project investigates whether computer vision models can detect weld quality issues from manufacturing images. I approached the task as an applied machine learning problem: first understanding the dataset and its limitations, then building CNN baselines, experimenting with preprocessing choices, and finally testing YOLOv8 for object detection.
 
