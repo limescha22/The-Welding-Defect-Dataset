@@ -1,5 +1,13 @@
 # Welding Defect Detection with Computer Vision
 
+## Executive Summary
+
+In this university project, I was assigned the industry area of manufacturing and independently defined the specific problem. I chose weld quality inspection because it is a relevant manufacturing use case where computer vision could support quality control, training, and safety assessment.
+
+I analyzed a YOLO-format welding image dataset, inspected data quality and class balance, built several CNN baselines, tested preprocessing and augmentation strategies, and fine-tuned YOLOv8 for object detection. The main finding was that the task is difficult not only because of model choice, but because the dataset is small, visually varied, partly noisy, and likely contains near-duplicate samples across splits. The experiments did not produce an industry-ready detector, but they showed why stronger data and evaluation design are necessary before such a model could be trusted.
+
+The key lesson I took from this project is that computer vision work needs careful dataset inspection before model optimization. If I continued the project, I would focus on defining a specific use-case and cleaning images accordingly, cleaning inter-class duplicates, using object detection metrics such as mAP and per-class precision/recall, and comparing newer YOLO versions or alternative detectors such as Faster R-CNN and SSD.
+
 This project investigates whether computer vision models can detect weld quality issues from manufacturing images. I approached the task as an applied machine learning problem: first understanding the dataset and its limitations, then building CNN baselines, experimenting with preprocessing choices, and finally testing YOLOv8 for object detection.
 
 The main value of the project is not just the final model result, but the full workflow: exploratory data analysis, problem framing, model comparison, error analysis, and a critical assessment of whether the dataset is strong enough for a reliable industrial use case.
