@@ -98,6 +98,25 @@ Counts below are label instances, not necessarily unique images, because one ima
 | Validation | 127 | 253 | 193 |
 | Test | 67 | 76 | 66 |
 
+## Model Performance
+
+The table below summarizes the recorded test-set results from the notebook. The CNN experiments should be read as exploratory baselines rather than production benchmarks, because the dataset is small and visually inconsistent.
+
+| Model | Input | Accuracy | Loss | Inference Time |
+| --- | --- | ---: | ---: | ---: |
+| Simple CNN | 256x256 grayscale | 29.73% | 0.5967 | 0.53s |
+| CNN with dropout | 256x256 grayscale | 8.11% | 0.6962 | 0.50s |
+| VGG-style CNN | 256x256 grayscale | 8.11% | 0.7108 | 5.61s |
+| Simple CNN | 400x400 grayscale | 21.62% | 0.6704 | 1.05s |
+| CNN with dropout | 400x400 grayscale | 8.11% | 0.7003 | 1.06s |
+| VGG-style CNN | 400x400 grayscale | 8.11% | 0.7348 | 16.07s |
+| Simple CNN | raw 640x640 RGB | 22.97% | 0.6628 | 4.20s |
+| CNN with dropout | raw 640x640 RGB | 50.00% | 0.6917 | 3.39s |
+
+The best CNN accuracy came from the raw RGB dropout model at 50.00%, but it was slower and more resource-intensive than the smaller grayscale models. A rotation-augmented version of the 256x256 grayscale simple CNN increased accuracy from 29.73% to 33.78%, but loss also increased from 0.5967 to 0.7474.
+
+For YOLOv8 object detection, the final recorded epoch reached precision 0.575, recall 0.453, mAP50 0.476, and mAP50-95 0.270. The improving training metrics combined with limited validation performance suggested that dataset quality and size were stronger bottlenecks than model architecture alone.
+
 ## Key Findings
 
 - The task is difficult because weld appearance varies strongly across source, angle, lighting, distance, and image quality.
