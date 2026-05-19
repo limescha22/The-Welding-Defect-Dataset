@@ -8,6 +8,12 @@ I analyzed a YOLO-format welding image dataset, inspected data quality and class
 
 The key lesson I took from this project is that computer vision work needs careful dataset inspection before model optimization. If I continued the project, I would focus on defining a specific use-case and cleaning images accordingly, cleaning inter-class duplicates, using object detection metrics such as mAP and per-class precision/recall, and comparing newer YOLO versions or alternative detectors such as Faster R-CNN and SSD.
 
+The two examples below give a quick impression of the data: some images are relatively clear, while others are already transformed, augmented, or visually messy, which made the modeling task more difficult.
+
+![Example weld image with text overlay](train/images/carbon-steel-good-welds_14_jpeg_jpg.rf.49688b4d08c60bf6a65cc6f03e7d25ff.jpg)
+
+![Example preprocessed weld image](train/images/0e538f39-1d30436c-c23_jpg.rf.9af91763a613bf193d03c39400da2ec6.jpg)
+
 This project investigates whether computer vision models can detect weld quality issues from manufacturing images. I approached the task as an applied machine learning problem: first understanding the dataset and its limitations, then building CNN baselines, experimenting with preprocessing choices, and finally testing YOLOv8 for object detection.
 
 The main value of the project is not just the final model result, but the full workflow: exploratory data analysis, problem framing, model comparison, error analysis, and a critical assessment of whether the dataset is strong enough for a reliable industrial use case.
